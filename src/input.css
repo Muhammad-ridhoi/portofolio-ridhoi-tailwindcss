@@ -1,0 +1,146 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out both;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 640px) {
+  #beranda {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  #beranda h1 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  #beranda h2 {
+    font-size: 2.5rem;
+  }
+
+  #beranda p {
+    font-size: 1rem;
+  }
+
+  #beranda .w-64 {
+    width: 120px;
+  }
+  /* efek loading spinner */
+  .spinner {
+    border-width: 4px;
+    border-color: transparent;
+    border-top-color: #38bdf8; /* Warna biru seperti skydive */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Grid section */
+  .grid {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+
+  /* Hide decorative blobs on small screens */
+  .text-sky-100 {
+    display: none;
+  }
+}
+
+#modalContent {
+  position: relative;
+}
+
+#closeModalBtn {
+  top: 10px; /* Menyesuaikan posisi agar lebih enak di mobile */
+  right: 10px;
+}
+
+#prevBtn,
+#nextBtn {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  #prevBtn,
+  #nextBtn {
+    font-size: 1.5rem; /* Lebih kecil di mobile */
+  }
+}
+#carouselInner {
+  transition: transform 0.5s ease-in-out;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #38bdf8;
+  border-radius: 10px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  #chatBoxWidget {
+    width: 90%;
+    right: 5%;
+    bottom: 20px;
+  }
+  #chatToggleBtn {
+    width: 50px;
+    height: 50px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* chatbot */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #7dd3fc; /* sky-300 */
+  border-radius: 3px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}

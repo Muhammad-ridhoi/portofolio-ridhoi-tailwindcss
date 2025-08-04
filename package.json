@@ -2,17 +2,24 @@
   "name": "projectscoding",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/Muhammad-ridhoi/my-portofolio.git",
+  "bugs": {
+    "url": "https://muhammad-ridhoi.github.io/my-portofolio/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muhammad-ridhoi/portofolio-ridhoi-tailwindcss.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/style.css --watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.4",
-    "tailwindcss": "^4.1.4"
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
   }
 }

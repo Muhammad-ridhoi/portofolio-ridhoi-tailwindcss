@@ -67,18 +67,18 @@
     </style>
   </head>
   <body
-    class="bg-gradient-to-br from-slate-50 via-blue-50 to-sky-50 text-slate-800 relative"
+    class="bg-gradient-to-br from-slate-50 via-blue-50 to-sky-50 text-slate-800 relative dark:from-slate-900 dark:via-slate-800 dark:to-gray-900 dark:text-slate-200"
   >
     <nav
-      class="fixed top-0 w-full bg-white/80 backdrop-blur-xl z-50 border-b border-sky-200/50 shadow-lg shadow-sky-500/5"
+      class="fixed top-0 w-full bg-white/80 backdrop-blur-xl z-50 border-b border-sky-200/50 shadow-lg shadow-sky-500/5 dark:bg-slate-900/80 dark:border-sky-500/10 dark:bg-slate-800"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center py-4">
           <div class="text-2xl font-bold gradient-text">Muhammad Ridhoi</div>
-          <div class="hidden lg:flex space-x-8">
+          <div class="hidden lg:flex items-center space-x-8">
             <a
               href="#beranda"
-              class="text-slate-600 hover:text-sky-600 font-medium transition-all duration-300 relative group"
+              class="text-slate-600 hover:text-sky-600 font-medium transition-all duration-300 relative group dark:text-slate-300 dark:hover:text-sky-400"
             >
               Beranda
               <span
@@ -87,7 +87,7 @@
             </a>
             <a
               href="#tentang"
-              class="text-slate-600 hover:text-sky-600 font-medium transition-all duration-300 relative group"
+              class="text-slate-600 hover:text-sky-600 font-medium transition-all duration-300 relative group dark:text-slate-300 dark:hover:text-sky-400"
             >
               Tentang Saya
               <span
@@ -96,7 +96,7 @@
             </a>
             <a
               href="#portofolio"
-              class="text-slate-600 hover:text-sky-600 font-medium transition-all duration-300 relative group"
+              class="text-slate-600 hover:text-sky-600 font-medium transition-all duration-300 relative group dark:text-slate-300 dark:hover:text-sky-400"
             >
               Portofolio
               <span
@@ -105,7 +105,7 @@
             </a>
             <a
               href="#pengalaman"
-              class="text-slate-600 hover:text-sky-600 font-medium transition-all duration-300 relative group"
+              class="text-slate-600 hover:text-sky-600 font-medium transition-all duration-300 relative group dark:text-slate-300 dark:hover:text-sky-400"
             >
               Pengalaman
               <span
@@ -114,7 +114,7 @@
             </a>
             <a
               href="#sertifikat"
-              class="text-slate-600 hover:text-sky-600 font-medium transition-all duration-300 relative group"
+              class="text-slate-600 hover:text-sky-600 font-medium transition-all duration-300 relative group dark:text-slate-300 dark:hover:text-sky-400"
             >
               Sertifikat
               <span
@@ -123,67 +123,122 @@
             </a>
             <a
               href="#kontak"
-              class="text-slate-600 hover:text-sky-600 font-medium transition-all duration-300 relative group"
+              class="text-slate-600 hover:text-sky-600 font-medium transition-all duration-300 relative group dark:text-slate-300 dark:hover:text-sky-400"
             >
               Kontak
               <span
                 class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-sky-400 to-blue-500 transition-all duration-300 group-hover:w-full"
               ></span>
             </a>
-          </div>
-          <button
-            id="mobile-menu-btn"
-            class="lg:hidden p-2 rounded-lg hover:bg-sky-100 transition-colors"
-          >
-            <svg
-              class="w-6 h-6 text-slate-600"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+
+            <button
+              id="theme-toggle"
+              type="button"
+              class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none rounded-lg text-sm p-2.5"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
+              <svg
+                id="theme-toggle-dark-icon"
+                class="hidden w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+              <svg
+                id="theme-toggle-light-icon"
+                class="hidden w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm-.707 10.607a1 1 0 011.414 0l.707-.707a1 1 0 111.414 1.414l-.707.707a1 1 0 01-1.414 0zM2 11a1 1 0 100-2H1a1 1 0 100 2h1z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="flex items-center lg:hidden">
+            <button
+              id="theme-toggle-mobile"
+              type="button"
+              class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none rounded-lg text-sm p-2.5 mr-2"
+            >
+              <svg
+                id="theme-toggle-dark-icon-mobile"
+                class="hidden w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+              <svg
+                id="theme-toggle-light-icon-mobile"
+                class="hidden w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm-.707 10.607a1 1 0 011.414 0l.707-.707a1 1 0 111.414 1.414l-.707.707a1 1 0 01-1.414 0zM2 11a1 1 0 100-2H1a1 1 0 100 2h1z"
+                ></path>
+              </svg>
+            </button>
+            <button
+              id="mobile-menu-btn"
+              class="p-2 rounded-lg hover:bg-sky-100 transition-colors"
+            >
+              <svg
+                class="w-6 h-6 text-slate-600 dark:text-slate-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
       <div
         id="mobile-menu"
-        class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-t border-sky-200/50"
+        class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-t border-sky-200/50 dark:bg-slate-800"
       >
         <div class="px-4 py-4 space-y-3">
           <a
             href="#beranda"
-            class="block px-4 py-2 text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all"
+            class="block px-4 py-2 text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all dark:text-slate-300"
             >Beranda</a
           >
           <a
             href="#tentang"
-            class="block px-4 py-2 text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all"
+            class="block px-4 py-2 text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all dark:text-slate-300"
             >Tentang Saya</a
           >
           <a
             href="#portofolio"
-            class="block px-4 py-2 text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all"
+            class="block px-4 py-2 text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all dark:text-slate-300"
             >Portofolio</a
           >
           <a
             href="#pengalaman"
-            class="block px-4 py-2 text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all"
+            class="block px-4 py-2 text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all dark:text-slate-300"
             >Pengalaman</a
           >
           <a
             href="#sertifikat"
-            class="block px-4 py-2 text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all"
+            class="block px-4 py-2 text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all dark:text-slate-300"
             >Sertifikat</a
           >
           <a
             href="#kontak"
-            class="block px-4 py-2 text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all"
+            class="block px-4 py-2 text-slate-600 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-all dark:text-slate-300"
             >Kontak</a
           >
         </div>
@@ -203,19 +258,23 @@
               Halo, Saya
             </p>
             <h1
-              class="text-5xl lg:text-7xl font-bold text-slate-800 leading-tight"
+              class="text-5xl lg:text-7xl font-bold text-slate-800 leading-tight dark:text-slate-200"
             >
               <span class="gradient-text">Muhammad Ridhoi</span>
             </h1>
-            <div class="text-2xl lg:text-3xl font-semibold text-slate-600 h-12">
+            <div
+              class="text-2xl lg:text-3xl font-semibold text-slate-600 h-12 dark:text-slate-300"
+            >
               <span id="typing-text" class="typing-cursor"
                 >Siapakah Saya?🤫🤔🤔</span
               >
             </div>
           </div>
-          <p class="text-lg text-slate-600 leading-relaxed max-w-2xl">
+          <p
+            class="text-lg text-slate-600 leading-relaxed max-w-2xl dark:text-slate-300"
+          >
             Fresh Graduate SMK Teknik Komputer Jaringan yang passionate di
-            bidang IT Support dan Network Infrastructure.
+            bidang Network Infrastructure dan Manajemen Data
           </p>
           <div
             class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
@@ -252,7 +311,7 @@
           <div class="flex gap-4 justify-center lg:justify-start pt-4">
             <a
               href="https://www.instagram.com/muhammddhoi03?igsh=ZnQzMzZjenl5b2Yx"
-              class="w-12 h-12 bg-white rounded-xl shadow-md hover:shadow-lg flex items-center justify-center text-sky-600 hover:text-sky-700 transition-all duration-300 transform hover:scale-110"
+              class="w-12 h-12 bg-white rounded-xl shadow-md hover:shadow-lg flex items-center justify-center text-sky-600 hover:text-sky-700 transition-all duration-300 transform hover:scale-110 dark:bg-slate-800"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -262,7 +321,7 @@
             </a>
             <a
               href="https://www.linkedin.com/in/muhammad-ridhoi-603319350?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              class="w-12 h-12 bg-white rounded-xl shadow-md hover:shadow-lg flex items-center justify-center text-sky-600 hover:text-sky-700 transition-all duration-300 transform hover:scale-110"
+              class="w-12 h-12 bg-white rounded-xl shadow-md hover:shadow-lg flex items-center justify-center text-sky-600 hover:text-sky-700 transition-all duration-300 transform hover:scale-110 dark:bg-slate-800"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path
@@ -280,7 +339,7 @@
               <img
                 src="./img/passfoto.jpeg"
                 alt="Muhammad Ridhoi Profile Photo"
-                class="w-full h-full object-cover"
+                class="w-full h-full cover"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
               />
               <div
@@ -300,13 +359,17 @@
           <h2 class="text-4xl lg:text-5xl font-bold gradient-text mb-4">
             Tentang Saya
           </h2>
-          <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p
+            class="text-xl text-slate-600 max-w-2xl mx-auto dark:text-slate-300"
+          >
             Yuk Kenal lebih dekat siapa Saya sebenarnya😊😄
           </p>
         </div>
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
-            <p class="text-lg leading-relaxed text-slate-600">
+            <p
+              class="text-lg leading-relaxed text-slate-600 dark:text-slate-300"
+            >
               Halo👋! Saya Muhammad Ridhoi, Sebagai lulusan baru SMK Jurusan
               Teknik Komputer Jaringan, saya memiliki fondasi kuat dalam
               ketelitian, pemecahan masalah yang sistematis, dan perhatian
@@ -320,46 +383,57 @@
               kemauan belajar yang kuat membuat saya siap untuk berkontribusi
               secara positif.
             </p>
-            <p class="text-lg leading-relaxed text-slate-600">
+            <p
+              class="text-lg leading-relaxed text-slate-600 dark:text-slate-300"
+            >
               Saya percaya bahwa disiplin dan dedikasi adalah kunci sukses dalam
               mencapai tujuan.
             </p>
             <div
-              class="bg-gradient-to-br from-sky-50 to-blue-50 p-6 rounded-2xl border border-sky-200"
+              class="p-6 rounded-2xl border transition-all duration-300 bg-gradient-to-br from-sky-50 to-blue-50 border-sky-200 shadow-lg shadow-sky-500/5 dark:from-slate-800/80 dark:to-gray-800/80 dark:border-slate-700 dark:shadow-sky-500/5"
             >
-              <h4 class="font-bold text-slate-800 mb-3">
-                💡 Motivasi untuk Para IT Enthusiast:
-              </h4>
-              <p class="text-slate-700 italic">
-                "Setiap tantangan adalah kesempatan untuk tumbuh, yang
-                terpenting adalah konsistensi dalam belajar dan pantang menyerah
-                dalam menghadapi obstacle."
-              </p>
+              <div class="flex items-start gap-4">
+                <div class="text-2xl mt-1">💡</div>
+
+                <div>
+                  <h4 class="font-bold text-slate-800 mb-2 dark:text-sky-400">
+                    Motivasi untuk Para IT Enthusiast
+                  </h4>
+
+                  <p class="text-slate-700 italic dark:text-slate-300">
+                    "Setiap tantangan adalah kesempatan untuk tumbuh. Yang
+                    terpenting adalah konsistensi dalam belajar dan pantang
+                    menyerah dalam menghadapi obstacle."
+                  </p>
+                </div>
+              </div>
             </div>
             <div class="grid grid-cols-2 gap-6">
               <div
-                class="text-center p-6 bg-white rounded-2xl shadow-lg shadow-sky-500/5 card-hover"
+                class="text-center p-6 bg-white rounded-2xl shadow-lg shadow-sky-500/5 card-hover dark:bg-slate-800"
               >
                 <div class="text-3xl font-bold text-sky-600 mb-2">0</div>
-                <div class="text-slate-600 font-medium">Pengalaman Kerja</div>
+                <div class="text-slate-600 font-medium dark:text-slate-300">
+                  Pengalaman Kerja
+                </div>
               </div>
               <div
-                class="text-center p-6 bg-white rounded-2xl shadow-lg shadow-sky-500/5 card-hover"
+                class="text-center p-6 bg-white rounded-2xl shadow-lg shadow-sky-500/5 card-hover dark:bg-slate-800"
               >
                 <div class="text-3xl font-bold text-sky-600 mb-2">4</div>
-                <div class="text-slate-600 font-medium">Bulan PKL</div>
+                <div class="text-slate-600 font-medium dark:text-slate-300">
+                  Bulan PKL
+                </div>
               </div>
             </div>
           </div>
           <div
-            class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover"
+            class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover dark:bg-slate-800 dark:border dark:border-slate-700 dark:bg-slate-800"
           >
-            <h3 class="text-2xl font-bold text-slate-800 mb-6">
-              Kemampuan Teknis
-            </h3>
+            <h3 class="text-2xl font-bold mb-6">Kemampuan Teknis</h3>
             <div class="space-y-4">
               <div class="flex justify-between items-center">
-                <span class="font-medium text-slate-700"
+                <span class="font-medium text-slate-700 dark:text-slate-300"
                   >Konfigurasi Dasar Router Mikrotik</span
                 >
                 <span class="text-sky-600 font-semibold">94%</span>
@@ -371,7 +445,7 @@
                 ></div>
               </div>
               <div class="flex justify-between items-center">
-                <span class="font-medium text-slate-700"
+                <span class="font-medium text-slate-700 dark:text-slate-300"
                   >Entri & Data Akurat</span
                 >
                 <span class="text-sky-600 font-semibold">80%</span>
@@ -383,7 +457,7 @@
                 ></div>
               </div>
               <div class="flex justify-between items-center">
-                <span class="font-medium text-slate-700"
+                <span class="font-medium text-slate-700 dark:text-slate-300"
                   >Manajemen Data & Administrasi Digital</span
                 >
                 <span class="text-sky-600 font-semibold">78%</span>
@@ -402,21 +476,23 @@
 
     <section
       id="portofolio"
-      class="py-20 px-4 bg-gradient-to-br from-sky-50 to-blue-50"
+      class="py-20 px-4 bg-gradient-to-br from-sky-50 to-blue-50 dark:bg-slate-900"
     >
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-4xl lg:text-5xl font-bold gradient-text mb-4">
             Portofolio
           </h2>
-          <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p
+            class="text-xl text-slate-600 max-w-2xl mx-auto dark:text-slate-400"
+          >
             Proyek-proyek yang telah saya kerjakan selama masa pendidikan dan
             PKL
           </p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
-            class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
+            class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
           >
             <div
               class="h-48 bg-gradient-to-br from-sky-400 to-blue-600 relative flex items-center justify-center"
@@ -430,25 +506,29 @@
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold text-slate-800 mb-3">
+              <h3
+                class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-3"
+              >
                 Ujian Kompetensi Keahlian
               </h3>
-              <p class="text-slate-600 mb-4 text-sm">
+              <p class="text-slate-600 dark:text-slate-300 mb-4 text-sm">
                 Menyelesaikan ujian praktik keahlian di bidang Teknik Komputer
                 Jaringan dengan implementasi konfigurasi jaringan dan
                 troubleshooting sistem.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-sky-100 text-sky-600 px-2 py-1 rounded text-xs"
+                <span
+                  class="bg-sky-100 text-sky-600 dark:bg-sky-900/50 dark:text-sky-300 px-2 py-1 rounded text-xs"
                   >Topologi Jaringan</span
                 >
                 <span
-                  class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs"
+                  class="bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-300 px-2 py-1 rounded text-xs"
                   >Mikrotik Configuration</span
                 >
               </div>
               <div class="text-center">
-                <span class="text-green-600 font-semibold text-sm"
+                <span
+                  class="text-green-600 dark:text-green-400 font-semibold text-sm"
                   >✓ Completed</span
                 >
               </div>
@@ -456,7 +536,7 @@
           </div>
 
           <div
-            class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
+            class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
           >
             <div
               class="h-48 bg-gradient-to-br from-blue-400 to-indigo-600 relative flex items-center justify-center"
@@ -470,26 +550,29 @@
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold text-slate-800 mb-3">
+              <h3
+                class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-3"
+              >
                 Network Infrastructure KSOP
               </h3>
-              <p class="text-slate-600 mb-4 text-sm">
+              <p class="text-slate-600 dark:text-slate-300 mb-4 text-sm">
                 Proyek instalasi jaringan di KSOP Pelabuhan Kota Cirebon
                 meliputi penarikan, pemasangan, dan crimping kabel LAN bersama
                 tim PKL.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  class="bg-green-100 text-green-600 px-2 py-1 rounded text-xs"
+                  class="bg-green-100 text-green-600 dark:bg-green-900/50 dark:text-green-300 px-2 py-1 rounded text-xs"
                   >Cable Management</span
                 >
                 <span
-                  class="bg-yellow-100 text-yellow-600 px-2 py-1 rounded text-xs"
+                  class="bg-yellow-100 text-yellow-600 dark:bg-yellow-900/50 dark:text-yellow-300 px-2 py-1 rounded text-xs"
                   >LAN Setup</span
                 >
               </div>
               <div class="text-center">
-                <span class="text-green-600 font-semibold text-sm"
+                <span
+                  class="text-green-600 dark:text-green-400 font-semibold text-sm"
                   >✓ Successfully Implemented</span
                 >
               </div>
@@ -497,7 +580,7 @@
           </div>
 
           <div
-            class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
+            class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
           >
             <div
               class="h-48 bg-gradient-to-br from-indigo-400 to-purple-600 relative flex items-center justify-center"
@@ -511,25 +594,29 @@
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold text-slate-800 mb-3">
+              <h3
+                class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-3"
+              >
                 Mikrotik Login Page
               </h3>
-              <p class="text-slate-600 mb-4 text-sm">
+              <p class="text-slate-600 dark:text-slate-300 mb-4 text-sm">
                 Mengembangkan halaman login DoridoNet custom untuk router
                 Mikrotik dengan interface yang user-friendly. Masih dalam tahap
                 pengembangan.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-xs"
+                <span
+                  class="bg-red-100 text-red-600 dark:bg-red-900/50 dark:text-red-300 px-2 py-1 rounded text-xs"
                   >HTML</span
                 >
                 <span
-                  class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs"
+                  class="bg-blue-100 text-blue-600 dark:bg-blue-900/50 dark:text-blue-300 px-2 py-1 rounded text-xs"
                   >CSS</span
                 >
               </div>
               <div class="text-center">
-                <span class="text-yellow-600 font-semibold text-sm"
+                <span
+                  class="text-yellow-600 dark:text-yellow-400 font-semibold text-sm"
                   >⚠ In Development</span
                 >
               </div>
@@ -537,7 +624,7 @@
           </div>
 
           <div
-            class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
+            class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
           >
             <div
               class="h-48 bg-gradient-to-br from-emerald-400 to-teal-600 relative flex items-center justify-center"
@@ -545,20 +632,24 @@
               <div class="text-white text-4xl">💼</div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold text-slate-800 mb-3">
+              <h3
+                class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-3"
+              >
                 Web Portfolio Pribadi
               </h3>
-              <p class="text-slate-600 mb-4 text-sm">
+              <p class="text-slate-600 dark:text-slate-300 mb-4 text-sm">
                 Website portfolio profesional menggunakan Tailwind CSS dengan
                 design modern dan responsif untuk showcase project.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-sky-100 text-sky-600 px-2 py-1 rounded text-xs"
+                <span
+                  class="bg-sky-100 text-sky-600 dark:bg-sky-900/50 dark:text-sky-300 px-2 py-1 rounded text-xs"
                   >TailwindCSS</span
                 >
               </div>
               <div class="text-center">
-                <span class="text-green-600 font-semibold text-sm"
+                <span
+                  class="text-green-600 dark:text-green-400 font-semibold text-sm"
                   >✓ Successfully Implemented</span
                 >
               </div>
@@ -566,7 +657,7 @@
           </div>
 
           <div
-            class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
+            class="bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
           >
             <div
               class="h-48 bg-gradient-to-br from-rose-400 to-pink-600 relative flex items-center justify-center"
@@ -574,26 +665,29 @@
               <div class="text-white text-4xl">🔧</div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold text-slate-800 mb-3">
+              <h3
+                class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-3"
+              >
                 IT Support Experience
               </h3>
-              <p class="text-slate-600 mb-4 text-sm">
+              <p class="text-slate-600 dark:text-slate-300 mb-4 text-sm">
                 Pengalaman 4 bulan di AKMI Suaka Bahari melakukan
                 troubleshooting, maintenance komputer, dan support teknis
                 operasional.
               </p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span
-                  class="bg-purple-100 text-purple-600 px-2 py-1 rounded text-xs"
+                  class="bg-purple-100 text-purple-600 dark:bg-purple-900/50 dark:text-purple-300 px-2 py-1 rounded text-xs"
                   >Troubleshooting</span
                 >
                 <span
-                  class="bg-orange-100 text-orange-600 px-2 py-1 rounded text-xs"
+                  class="bg-orange-100 text-orange-600 dark:bg-orange-900/50 dark:text-orange-300 px-2 py-1 rounded text-xs"
                   >Hardware Fix</span
                 >
               </div>
               <div class="text-center">
-                <span class="text-green-600 font-semibold text-sm"
+                <span
+                  class="text-green-600 dark:text-green-400 font-semibold text-sm"
                   >✓ 4 Months Experience</span
                 >
               </div>
@@ -609,18 +703,20 @@
           <h2 class="text-4xl lg:text-5xl font-bold gradient-text mb-4">
             Pengalaman
           </h2>
-          <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p
+            class="text-xl text-slate-600 max-w-2xl mx-auto dark:text-slate-400"
+          >
             Perjalanan pendidikan dan pengalaman saya
           </p>
         </div>
 
         <div class="space-y-8">
           <div
-            class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover"
+            class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover dark:bg-slate-800 dark:border dark:border-slate-700"
           >
             <div class="flex items-center justify-between mb-4">
               <span
-                class="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold"
+                class="bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-semibold dark:bg-blue-900/50 dark:text-blue-300"
                 >2022 - 2025</span
               >
               <div
@@ -641,24 +737,26 @@
                 </svg>
               </div>
             </div>
-            <h3 class="text-2xl font-bold text-slate-800 mb-2">
+            <h3
+              class="text-2xl font-bold text-slate-800 mb-2 dark:text-slate-200"
+            >
               Teknik Komputer Jaringan
             </h3>
             <p class="text-sky-600 font-semibold mb-4">
               SMKs Wahidin Kota Cirebon
             </p>
-            <p class="text-slate-600 leading-relaxed">
+            <p class="text-slate-600 leading-relaxed dark:text-slate-300">
               Menempuh pendidikan kejuruan di bidang Teknik Komputer Jaringan,
               mempelajari konfigurasi router, switch, troubleshooting jaringan,
               dan sistem administrasi komputer.
             </p>
           </div>
           <div
-            class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover"
+            class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover dark:bg-slate-800 dark:border dark:border-slate-700"
           >
             <div class="flex items-center justify-between mb-4">
               <span
-                class="bg-sky-100 text-sky-600 px-4 py-2 rounded-full text-sm font-semibold"
+                class="bg-sky-100 text-sky-600 px-4 py-2 rounded-full text-sm font-semibold dark:bg-sky-900/50 dark:text-sky-300"
                 >2024 (4 Bulan)</span
               >
               <div
@@ -679,13 +777,15 @@
                 </svg>
               </div>
             </div>
-            <h3 class="text-2xl font-bold text-slate-800 mb-2">
+            <h3
+              class="text-2xl font-bold text-slate-800 mb-2 dark:text-slate-200"
+            >
               Praktik Kerja Lapangan
             </h3>
             <p class="text-sky-600 font-semibold mb-4">
               AKMI Suaka Bahari Cirebon
             </p>
-            <p class="text-slate-600 leading-relaxed">
+            <p class="text-slate-600 leading-relaxed dark:text-slate-300">
               Melakukan Praktik Kerja Lapangan selama 4 bulan di bagian IT,
               menangani troubleshooting komputer, maintenance hardware, dan
               memberikan support teknis untuk operasional harian.
@@ -697,21 +797,23 @@
 
     <section
       id="sertifikat"
-      class="py-20 px-4 bg-gradient-to-br from-sky-50 to-blue-50"
+      class="py-20 px-4 bg-gradient-to-br from-sky-50 to-blue-50 dark:bg-slate-900"
     >
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-4xl lg:text-5xl font-bold gradient-text mb-4">
             Sertifikat
           </h2>
-          <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p
+            class="text-xl text-slate-600 max-w-2xl mx-auto dark:text-slate-400"
+          >
             Sertifikasi dan pencapaian yang telah saya raih
           </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
-            class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover"
+            class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover"
           >
             <div class="text-center mb-6">
               <div
@@ -731,30 +833,34 @@
                   ></path>
                 </svg>
               </div>
-              <h3 class="text-xl font-bold text-slate-800 mb-2">
+              <h3
+                class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2"
+              >
                 Sertifikat BNSP
               </h3>
-              <p class="text-sky-600 font-semibold mb-4">
+              <p class="text-sky-600 dark:text-sky-400 font-semibold mb-4">
                 Badan Nasional Sertifikasi Profesi
               </p>
-              <div class="text-sm text-slate-500 mb-4">
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-4">
                 Issued: Agustus 2025
               </div>
             </div>
-            <p class="text-slate-600 text-center leading-relaxed mb-6">
+            <p
+              class="text-slate-600 dark:text-slate-300 text-center leading-relaxed mb-6"
+            >
               Sertifikasi kompetensi profesional di bidang Teknik Komputer
               Jaringan yang menvalidasi keahlian dalam instalasi dan konfigurasi
               jaringan.
             </p>
             <div class="text-center">
-              <span class="text-green-600 font-semibold"
+              <span class="text-green-600 dark:text-green-400 font-semibold"
                 >✓ Certified Professional</span
               >
             </div>
           </div>
 
           <div
-            class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover"
+            class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover"
           >
             <div class="text-center mb-6">
               <div
@@ -774,28 +880,33 @@
                   ></path>
                 </svg>
               </div>
-              <h3 class="text-xl font-bold text-slate-800 mb-2">
+              <h3
+                class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2"
+              >
                 Sertifikat PKL
               </h3>
-              <p class="text-sky-600 font-semibold mb-4">
+              <p class="text-sky-600 dark:text-sky-400 font-semibold mb-4">
                 AKMI Suaka Bahari Cirebon
               </p>
-              <div class="text-sm text-slate-500 mb-4">
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-4">
                 Issued: Desember 2024
               </div>
             </div>
-            <p class="text-slate-600 text-center leading-relaxed mb-6">
+            <p
+              class="text-slate-600 dark:text-slate-300 text-center leading-relaxed mb-6"
+            >
               Sertifikat penyelesaian Praktik Kerja Lapangan selama 4 bulan di
               bagian IT dengan fokus pada IT Support dan Network Infrastructure.
             </p>
             <div class="text-center">
-              <span class="text-green-600 font-semibold"
+              <span class="text-green-600 dark:text-green-400 font-semibold"
                 >✓ 4 Months Completed</span
               >
             </div>
           </div>
+
           <div
-            class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover border-2 border-dashed border-sky-200"
+            class="bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover border-2 border-dashed border-sky-200 dark:border-slate-700"
           >
             <div class="text-center mb-6">
               <div
@@ -815,18 +926,28 @@
                   ></path>
                 </svg>
               </div>
-              <h3 class="text-xl font-bold text-slate-800 mb-2">
+              <h3
+                class="text-xl font-bold text-slate-800 dark:text-slate-100 mb-2"
+              >
                 Future Certifications
               </h3>
-              <p class="text-sky-600 font-semibold mb-4">Coming Soon</p>
-              <div class="text-sm text-slate-500 mb-4">Target: 2025</div>
+              <p class="text-sky-600 dark:text-sky-400 font-semibold mb-4">
+                Coming Soon
+              </p>
+              <div class="text-sm text-slate-500 dark:text-slate-400 mb-4">
+                Target: 2025
+              </div>
             </div>
-            <p class="text-slate-600 text-center leading-relaxed mb-6">
+            <p
+              class="text-slate-600 dark:text-slate-300 text-center leading-relaxed mb-6"
+            >
               Rencana untuk mendapatkan sertifikasi tambahan di bidang IT dan
               networking untuk meningkatkan kompetensi profesional.
             </p>
             <div class="text-center">
-              <span class="text-sky-600 font-semibold">🎯 In Planning</span>
+              <span class="text-sky-600 dark:text-sky-400 font-semibold"
+                >🎯 In Planning</span
+              >
             </div>
           </div>
         </div>
@@ -839,7 +960,9 @@
           <h2 class="text-4xl lg:text-5xl font-bold gradient-text mb-4">
             Mari Berkolaborasi
           </h2>
-          <p class="text-xl text-slate-600 max-w-2xl mx-auto">
+          <p
+            class="text-xl text-slate-600 max-w-2xl mx-auto dark:text-slate-400"
+          >
             Hubungi saya untuk diskusi proyek, kritik, saran, atau kerjasama di
             bidang IT
           </p>
@@ -848,10 +971,14 @@
         <div class="grid lg:grid-cols-2 gap-12">
           <div class="space-y-8">
             <div>
-              <h3 class="text-2xl font-bold text-slate-800 mb-6">
+              <h3
+                class="text-2xl font-bold text-slate-800 mb-6 dark:text-slate-200"
+              >
                 Informasi Kontak
               </h3>
-              <p class="text-slate-600 mb-8 leading-relaxed">
+              <p
+                class="text-slate-600 mb-8 leading-relaxed dark:text-slate-300"
+              >
                 Saya terbuka untuk berbagai kesempatan, baik itu proyek IT,
                 kolaborasi, maupun feedback untuk pengembangan diri. Jangan ragu
                 untuk menghubungi saya!
@@ -878,7 +1005,9 @@
                   </div>
                   <div>
                     <div class="text-sm text-slate-500">Telepon / WhatsApp</div>
-                    <div class="text-slate-800 font-semibold">
+                    <div
+                      class="text-slate-800 font-semibold dark:text-slate-200"
+                    >
                       0857-2156-1232
                     </div>
                   </div>
@@ -904,7 +1033,9 @@
                   </div>
                   <div>
                     <div class="text-sm text-slate-500">Email</div>
-                    <div class="text-slate-800 font-semibold">
+                    <div
+                      class="text-slate-800 font-semibold dark:text-slate-200"
+                    >
                       ridhoimuhammad24@gmail.com
                     </div>
                   </div>
@@ -936,7 +1067,9 @@
                   </div>
                   <div>
                     <div class="text-sm text-slate-500">Alamat</div>
-                    <div class="text-slate-800 font-semibold">
+                    <div
+                      class="text-slate-800 font-semibold dark:text-slate-200"
+                    >
                       Jl. Kutagara Selatan, Kota Cirebon - Jawa Barat
                     </div>
                   </div>
@@ -958,7 +1091,9 @@
                   </div>
                   <div>
                     <div class="text-sm text-slate-500">Instagram</div>
-                    <div class="text-slate-800 font-semibold">
+                    <div
+                      class="text-slate-800 font-semibold dark:text-slate-200"
+                    >
                       @muhammaddhoi03
                     </div>
                   </div>
@@ -967,8 +1102,14 @@
             </div>
           </div>
 
-          <div class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10">
-            <h3 class="text-2xl font-bold text-slate-800 mb-6">Kirim Pesan</h3>
+          <div
+            class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 dark:bg-slate-800 dark:border dark:border-slate-700"
+          >
+            <h3
+              class="text-2xl font-bold text-slate-800 mb-6 dark:text-slate-200"
+            >
+              Kirim Pesan
+            </h3>
             <form
               class="space-y-6"
               id="contact-form"
@@ -980,7 +1121,7 @@
                 <div>
                   <label
                     for="name"
-                    class="block text-sm font-medium text-slate-700 mb-2"
+                    class="block text-sm font-medium text-slate-700 mb-2 dark:text-slate-300"
                     >Nama Lengkap</label
                   >
                   <input
@@ -995,7 +1136,7 @@
                 <div>
                   <label
                     for="email"
-                    class="block text-sm font-medium text-slate-700 mb-2"
+                    class="block text-sm font-medium text-slate-700 mb-2 dark:text-slate-300"
                     >Email</label
                   >
                   <input
@@ -1012,7 +1153,7 @@
               <div>
                 <label
                   for="subject"
-                  class="block text-sm font-medium text-slate-700 mb-2"
+                  class="block text-sm font-medium text-slate-700 mb-2 dark:text-slate-300"
                   >Subjek</label
                 >
                 <select
@@ -1033,7 +1174,7 @@
               <div>
                 <label
                   for="message"
-                  class="block text-sm font-medium text-slate-700 mb-2"
+                  class="block text-sm font-medium text-slate-700 mb-2 dark:text-slate-300"
                   >Pesan</label
                 >
                 <textarea
@@ -1041,7 +1182,7 @@
                   name="message"
                   rows="5"
                   required
-                  class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-400/20 text-slate-800 placeholder-slate-400 resize-none"
+                  class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:border-sky-400 focus:outline-none focus:ring-2 focus:ring-sky-400/20 text-slate-800 placeholder-slate-400 resize-none dark:text-slate-200"
                   placeholder="Tulis pesan Anda di sini..."
                 ></textarea>
               </div>
@@ -1050,7 +1191,9 @@
                 type="submit"
                 class="w-full bg-gradient-to-r from-sky-500 to-blue-600 text-white py-4 rounded-xl font-semibold shadow-lg shadow-sky-500/25 hover:shadow-xl hover:shadow-sky-500/30 transition-all duration-300 transform hover:scale-105"
               >
-                <span class="flex items-center justify-center gap-2">
+                <span
+                  class="flex items-center justify-center gap-2 dark:text-slate-300"
+                >
                   Kirim Pesan
                   <svg
                     class="w-5 h-5"
@@ -1145,147 +1288,155 @@
         </div>
       </div>
     </footer>
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger
-      intent="WELCOME"
-      chat-title="DoridoBot"
-      agent-id="a76b4e4e-27c4-450e-aa0d-36c39f8e3a9f"
-      language-code="id"
-    ></df-messenger>
 
     <script>
-      // Typing Animation
-      const texts = [
-        "IT Support Specialist",
-        "Network Administrator",
-        "Fresh Graduate TKJ",
-        "Future TNI AL",
-        "Problem Solver",
-        "Tech Enthusiast",
-      ];
-
-      let textIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-      const typingSpeed = 100;
-      const deletingSpeed = 50;
-      const pauseTime = 2000;
-
-      function typeWriter() {
-        const currentText = texts[textIndex];
-        const typingElement = document.getElementById("typing-text");
-
-        if (!isDeleting) {
-          typingElement.textContent = currentText.substring(0, charIndex + 1);
-          charIndex++;
-
-          if (charIndex === currentText.length) {
-            setTimeout(() => {
-              isDeleting = true;
-            }, pauseTime);
-          }
-        } else {
-          typingElement.textContent = currentText.substring(0, charIndex - 1);
-          charIndex--;
-
-          if (charIndex === 0) {
-            isDeleting = false;
-            textIndex = (textIndex + 1) % texts.length;
-          }
-        }
-
-        const speed = isDeleting ? deletingSpeed : typingSpeed;
-        setTimeout(typeWriter, speed);
+      // Jalankan ini secepat mungkin untuk mengatur tema awal
+      if (
+        localStorage.getItem("color-theme") === "dark" ||
+        (!("color-theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
       }
+    </script>
 
-      // Mobile menu toggle
-      document
-        .getElementById("mobile-menu-btn")
-        .addEventListener("click", function () {
-          const mobileMenu = document.getElementById("mobile-menu");
-          mobileMenu.classList.toggle("hidden");
-        });
-
-      // Smooth scrolling for navigation links
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute("href"));
-          if (target) {
-            target.scrollIntoView({
-              behavior: "smooth",
-              block: "start",
-            });
-          }
-          // Close mobile menu if open
-          const mobileMenu = document.getElementById("mobile-menu");
-          if (!mobileMenu.classList.contains("hidden")) {
-            mobileMenu.classList.add("hidden");
-          }
-        });
-      });
-
-      // Contact form handling (jika Anda tidak menggunakan action mailto:)
-      const contactForm = document.getElementById("contact-form");
-      if (contactForm) {
-        contactForm.addEventListener("submit", function (e) {
-          // Hentikan default action jika itu BUKAN mailto:
-          if (this.getAttribute("action").startsWith("mailto:")) return;
-
-          e.preventDefault();
-          const formData = new FormData(this);
-          const data = Object.fromEntries(formData);
-
-          if (!data.name || !data.email || !data.subject || !data.message) {
-            alert("Mohon lengkapi semua field yang diperlukan.");
-            return;
-          }
-          alert(
-            "Terima kasih! Pesan Anda telah dikirim. Saya akan merespons segera."
-          );
-          this.reset();
-        });
-      }
-
-      // Initialize animations when page loads
+    <script>
+      // Menunggu sampai seluruh halaman HTML selesai dimuat, ini PENTING
       document.addEventListener("DOMContentLoaded", function () {
-        typeWriter();
+        // --- LOGIKA DARK MODE YANG DISEMPURNAKAN ---
+        const themeToggleDarkIcon = document.getElementById(
+          "theme-toggle-dark-icon"
+        );
+        const themeToggleLightIcon = document.getElementById(
+          "theme-toggle-light-icon"
+        );
+        const themeToggleBtn = document.getElementById("theme-toggle");
 
-        // Add scroll animations
-        const observerOptions = {
-          threshold: 0.1,
-          rootMargin: "0px 0px -50px 0px",
+        const themeToggleDarkIconMobile = document.getElementById(
+          "theme-toggle-dark-icon-mobile"
+        );
+        const themeToggleLightIconMobile = document.getElementById(
+          "theme-toggle-light-icon-mobile"
+        );
+        const themeToggleBtnMobile = document.getElementById(
+          "theme-toggle-mobile"
+        );
+
+        // Fungsi untuk menampilkan ikon yang benar berdasarkan tema saat ini
+        const updateIcons = () => {
+          const isDarkMode =
+            document.documentElement.classList.contains("dark");
+          // Ikon Desktop
+          themeToggleDarkIcon.classList.toggle("hidden", isDarkMode);
+          themeToggleLightIcon.classList.toggle("hidden", !isDarkMode);
+          // Ikon Mobile
+          themeToggleDarkIconMobile.classList.toggle("hidden", isDarkMode);
+          themeToggleLightIconMobile.classList.toggle("hidden", !isDarkMode);
         };
 
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.style.opacity = "1";
-              entry.target.style.transform = "translateY(0)";
+        // Fungsi yang berjalan saat salah satu tombol di-klik
+        const handleThemeToggle = () => {
+          document.documentElement.classList.toggle("dark");
+          const isDarkMode =
+            document.documentElement.classList.contains("dark");
+          localStorage.setItem("color-theme", isDarkMode ? "dark" : "light");
+          updateIcons(); // Panggil fungsi untuk update ikon setelah di-klik
+        };
+
+        // Tambahkan event listener ke kedua tombol
+        themeToggleBtn.addEventListener("click", handleThemeToggle);
+        themeToggleBtnMobile.addEventListener("click", handleThemeToggle);
+
+        // Jalankan fungsi untuk mengatur ikon awal saat halaman dimuat
+        updateIcons();
+
+        // --- KODE LAMA ANDA (DI DALAM LINGKUNGAN YANG AMAN) ---
+
+        // Typing Animation
+        const texts = [
+          "IT Support Specialist",
+          "Network Administrator",
+          "Fresh Graduate TKJ",
+          "Future TNI AL",
+          "Problem Solver",
+          "Tech Enthusiast",
+        ];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100;
+        const deletingSpeed = 50;
+        const pauseTime = 2000;
+
+        function typeWriter() {
+          const currentText = texts[textIndex];
+          const typingElement = document.getElementById("typing-text");
+          if (!typingElement) return;
+
+          if (!isDeleting) {
+            typingElement.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+            if (charIndex === currentText.length) {
+              setTimeout(() => {
+                isDeleting = true;
+              }, pauseTime);
+            }
+          } else {
+            typingElement.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+              isDeleting = false;
+              textIndex = (textIndex + 1) % texts.length;
+            }
+          }
+          const speed = isDeleting ? deletingSpeed : typingSpeed;
+          setTimeout(typeWriter, speed);
+        }
+        typeWriter();
+
+        // Mobile menu toggle
+        document
+          .getElementById("mobile-menu-btn")
+          .addEventListener("click", function () {
+            const mobileMenu = document.getElementById("mobile-menu");
+            mobileMenu.classList.toggle("hidden");
+          });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+            const mobileMenu = document.getElementById("mobile-menu");
+            if (!mobileMenu.classList.contains("hidden")) {
+              mobileMenu.classList.add("hidden");
             }
           });
-        }, observerOptions);
-
-        // Observe sections for scroll animations
-        document.querySelectorAll("section").forEach((section) => {
-          section.style.opacity = "0";
-          section.style.transform = "translateY(30px)";
-          section.style.transition = "all 0.6s ease-out";
-          observer.observe(section);
         });
-      });
 
-      // Add navbar scroll effect
-      window.addEventListener("scroll", function () {
-        const nav = document.querySelector("nav");
-        if (window.scrollY > 10) {
-          nav.classList.add("shadow-lg", "shadow-sky-500/5");
-        } else {
-          nav.classList.remove("shadow-lg", "shadow-sky-500/5");
-        }
-      });
-
-      console.log("🚀 Portfolio Muhammad Ridhoi loaded successfully!");
+        // Navbar scroll effect
+        window.addEventListener("scroll", function () {
+          const nav = document.querySelector("nav");
+          if (window.scrollY > 10) {
+            nav.classList.add(
+              "shadow-lg",
+              "shadow-sky-500/5",
+              "dark:shadow-sky-500/10"
+            );
+          } else {
+            nav.classList.remove(
+              "shadow-lg",
+              "shadow-sky-500/5",
+              "dark:shadow-sky-500/10"
+            );
+          }
+        });
+      }); // Akhir dari DOMContentLoaded
     </script>
   </body>
 </html>

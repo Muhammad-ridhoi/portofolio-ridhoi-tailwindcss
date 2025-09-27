@@ -1,14 +1,19 @@
 name: Build and Deploy to GitHub Pages
 
-# Pemicu: Jalankan otomatisasi ini setiap kali ada 'push' ke branch 'main'
 on:
   push:
     branches: ["main"]
 
+# =======================================================
+# TAMBAHKAN 3 BARIS INI UNTUK MEMBERI IZIN 'MENULIS'
+permissions:
+  contents: write
+# =======================================================
+
 jobs:
   build-and-deploy:
     name: Build and Deploy
-    runs-on: ubuntu-latest # Menggunakan sistem operasi Ubuntu di server GitHub
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
@@ -16,16 +21,17 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18" # Menggunakan Node.js versi 18
+          node-version: "18"
 
-      - name: Install Dependencies #Kode legacy-peer-deps
+      - name: Install Dependencies 📦
+        # Menggunakan --legacy-peer-deps untuk keamanan
         run: npm install --legacy-peer-deps
 
       - name: Build Project 🏗️
-        run: npm run build # Menjalankan skrip 'build' dari package.json
+        run: npm run build
 
       - name: Deploy to GitHub Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./ # Direktori yang akan di-publish (root folder proyek Anda)
+          publish_dir: ./

@@ -18,8 +18,8 @@ jobs:
         with:
           node-version: "18" # Menggunakan Node.js versi 18
 
-      - name: Install Dependencies 📦
-        run: npm install
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
 
       - name: Build Project 🏗️
         run: npm run build # Menjalankan skrip 'build' dari package.json

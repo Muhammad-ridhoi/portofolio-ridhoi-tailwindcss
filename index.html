@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/x-icon" href="img/ridhoi.ico" />
+    <link rel="icon" type="image/x-icon" href="./img/ridhoi.ico" />
     <style>
       body {
         font-family: "Inter", sans-serif;
@@ -68,7 +68,6 @@
   <body
     class="bg-gradient-to-br from-slate-50 via-blue-50 to-sky-50 text-slate-800 relative"
   >
-    <!-- Navigation -->
     <nav
       class="fixed top-0 w-full bg-white/80 backdrop-blur-xl z-50 border-b border-sky-200/50 shadow-lg shadow-sky-500/5"
     >
@@ -151,7 +150,6 @@
           </button>
         </div>
       </div>
-      <!-- Mobile Menu -->
       <div
         id="mobile-menu"
         class="hidden lg:hidden bg-white/95 backdrop-blur-xl border-t border-sky-200/50"
@@ -191,7 +189,6 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
     <section
       id="beranda"
       class="min-h-screen flex items-center justify-center relative pt-20 px-4"
@@ -251,7 +248,6 @@
               Download CV
             </a>
           </div>
-          <!-- RIDHOI: Social media links - update dengan akun asli kamu -->
           <div class="flex gap-4 justify-center lg:justify-start pt-4">
             <a
               href="https://www.instagram.com/muhammddhoi03?igsh=ZnQzMzZjenl5b2Yx"
@@ -263,160 +259,6 @@
                 />
               </svg>
             </a>
-
-            <!-- JavaScript -->
-            <script>
-              // Typing Animation
-              const texts = [
-                "IT Support Specialist",
-                "Network Administrator",
-                "Fresh Graduate TKJ",
-                "Future TNI AL",
-                "Problem Solver",
-                "Tech Enthusiast",
-              ];
-
-              let textIndex = 0;
-              let charIndex = 0;
-              let isDeleting = false;
-              const typingSpeed = 100;
-              const deletingSpeed = 50;
-              const pauseTime = 2000;
-
-              function typeWriter() {
-                const currentText = texts[textIndex];
-                const typingElement = document.getElementById("typing-text");
-
-                if (!isDeleting) {
-                  typingElement.textContent = currentText.substring(
-                    0,
-                    charIndex + 1
-                  );
-                  charIndex++;
-
-                  if (charIndex === currentText.length) {
-                    setTimeout(() => {
-                      isDeleting = true;
-                    }, pauseTime);
-                  }
-                } else {
-                  typingElement.textContent = currentText.substring(
-                    0,
-                    charIndex - 1
-                  );
-                  charIndex--;
-
-                  if (charIndex === 0) {
-                    isDeleting = false;
-                    textIndex = (textIndex + 1) % texts.length;
-                  }
-                }
-
-                const speed = isDeleting ? deletingSpeed : typingSpeed;
-                setTimeout(typeWriter, speed);
-              }
-
-              // Mobile menu toggle
-              document
-                .getElementById("mobile-menu-btn")
-                .addEventListener("click", function () {
-                  const mobileMenu = document.getElementById("mobile-menu");
-                  mobileMenu.classList.toggle("hidden");
-                });
-
-              // Smooth scrolling for navigation links
-              document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-                anchor.addEventListener("click", function (e) {
-                  e.preventDefault();
-                  const target = document.querySelector(
-                    this.getAttribute("href")
-                  );
-                  if (target) {
-                    target.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                  }
-                  // Close mobile menu if open
-                  const mobileMenu = document.getElementById("mobile-menu");
-                  if (!mobileMenu.classList.contains("hidden")) {
-                    mobileMenu.classList.add("hidden");
-                  }
-                });
-              });
-
-              // Contact form handling
-              document
-                .getElementById("contact-form")
-                .addEventListener("submit", function (e) {
-                  e.preventDefault();
-
-                  // Get form data
-                  const formData = new FormData(this);
-                  const data = Object.fromEntries(formData);
-
-                  // Simple validation
-                  if (
-                    !data.name ||
-                    !data.email ||
-                    !data.subject ||
-                    !data.message
-                  ) {
-                    alert("Mohon lengkapi semua field yang diperlukan.");
-                    return;
-                  }
-
-                  // Success message
-                  alert(
-                    "Terima kasih! Pesan Anda telah dikirim. Saya akan merespons segera."
-                  );
-
-                  // Reset form
-                  this.reset();
-                });
-
-              // Initialize animations when page loads
-              document.addEventListener("DOMContentLoaded", function () {
-                typeWriter();
-
-                // Add scroll animations
-                const observerOptions = {
-                  threshold: 0.1,
-                  rootMargin: "0px 0px -50px 0px",
-                };
-
-                const observer = new IntersectionObserver((entries) => {
-                  entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                      entry.target.style.opacity = "1";
-                      entry.target.style.transform = "translateY(0)";
-                    }
-                  });
-                }, observerOptions);
-
-                // Observe sections for scroll animations
-                document.querySelectorAll("section").forEach((section) => {
-                  section.style.opacity = "0";
-                  section.style.transform = "translateY(30px)";
-                  section.style.transition = "all 0.6s ease-out";
-                  observer.observe(section);
-                });
-              });
-
-              // Add navbar scroll effect
-              window.addEventListener("scroll", function () {
-                const nav = document.querySelector("nav");
-                if (window.scrollY > 100) {
-                  nav.classList.add("shadow-xl");
-                } else {
-                  nav.classList.remove("shadow-xl");
-                }
-              });
-
-              console.log("🚀 Portfolio Muhammad Ridhoi loaded successfully!");
-              console.log("💡 Tips: Update foto profil di img/profile.jpg");
-              console.log("⚡ Semangat untuk para Casis dan IT Enthusiast!");
-            </script>
             <a
               href="https://www.linkedin.com/in/muhammad-ridhoi-603319350?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
               class="w-12 h-12 bg-white rounded-xl shadow-md hover:shadow-lg flex items-center justify-center text-sky-600 hover:text-sky-700 transition-all duration-300 transform hover:scale-110"
@@ -434,11 +276,10 @@
             <div
               class="w-80 h-80 lg:w-96 lg:h-96 rounded-3xl overflow-hidden shadow-2xl shadow-sky-500/20 transform rotate-3 hover:rotate-0 transition-transform duration-500"
             >
-              <!-- RIDHOI: Ganti dengan path foto kamu di folder img/ -->
               <img
-                src="img/passfoto.jpeg"
+                src="./img/passfoto.jpeg"
                 alt="Muhammad Ridhoi Profile Photo"
-                class="w-full h-full cover"
+                class="w-full h-full object-cover"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
               />
               <div
@@ -452,7 +293,6 @@
       </div>
     </section>
 
-    <!-- About Section -->
     <section id="tentang" class="py-20 px-4 relative">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
@@ -559,7 +399,6 @@
       </div>
     </section>
 
-    <!-- Portfolio Section -->
     <section
       id="portofolio"
       class="py-20 px-4 bg-gradient-to-br from-sky-50 to-blue-50"
@@ -575,7 +414,6 @@
           </p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project 1 -->
           <div
             class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
           >
@@ -616,7 +454,6 @@
             </div>
           </div>
 
-          <!-- Project 2 -->
           <div
             class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
           >
@@ -658,7 +495,6 @@
             </div>
           </div>
 
-          <!-- Project 3 -->
           <div
             class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
           >
@@ -699,7 +535,6 @@
             </div>
           </div>
 
-          <!-- Project 4 -->
           <div
             class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
           >
@@ -729,7 +564,6 @@
             </div>
           </div>
 
-          <!-- Project 5 -->
           <div
             class="bg-white rounded-3xl overflow-hidden shadow-xl shadow-sky-500/10 card-hover"
           >
@@ -768,7 +602,6 @@
       </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="pengalaman" class="py-20 px-4 relative">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
@@ -781,7 +614,6 @@
         </div>
 
         <div class="space-y-8">
-          <!-- SMK Education -->
           <div
             class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover"
           >
@@ -820,7 +652,6 @@
               dan sistem administrasi komputer.
             </p>
           </div>
-          <!-- PKL Experience -->
           <div
             class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover"
           >
@@ -863,7 +694,6 @@
       </div>
     </section>
 
-    <!-- Certificates Section -->
     <section
       id="sertifikat"
       class="py-20 px-4 bg-gradient-to-br from-sky-50 to-blue-50"
@@ -879,7 +709,6 @@
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- BNSP Certificate -->
           <div
             class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover"
           >
@@ -923,7 +752,6 @@
             </div>
           </div>
 
-          <!-- PKL Certificate -->
           <div
             class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover"
           >
@@ -965,7 +793,6 @@
               >
             </div>
           </div>
-          <!-- Future Certificate Placeholder -->
           <div
             class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10 card-hover border-2 border-dashed border-sky-200"
           >
@@ -1005,7 +832,6 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="kontak" class="py-20 px-4 relative">
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-16">
@@ -1019,7 +845,6 @@
         </div>
 
         <div class="grid lg:grid-cols-2 gap-12">
-          <!-- Contact Info -->
           <div class="space-y-8">
             <div>
               <h3 class="text-2xl font-bold text-slate-800 mb-6">
@@ -1141,7 +966,6 @@
             </div>
           </div>
 
-          <!-- Contact Form -->
           <div class="bg-white p-8 rounded-3xl shadow-xl shadow-sky-500/10">
             <h3 class="text-2xl font-bold text-slate-800 mb-6">Kirim Pesan</h3>
             <form
@@ -1248,7 +1072,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer
       class="py-12 px-4 bg-gradient-to-br from-slate-800 to-slate-900 text-white relative overflow-hidden"
     >
@@ -1309,7 +1132,7 @@
 
           <div>
             <h4 class="text-xl font-bold mb-4">Hubungi Saya</h4>
-            <p class="text-slate-300">Kota Cirebon - Jawa Barat</p>
+            <p class="text-slate-300">Kota Cirebon, Indonesia</p>
             <p class="text-slate-300">Email: ridhoimuhammad24@gmail.com</p>
             <p class="text-slate-300">Telp: +62 857 2156 1232</p>
           </div>
@@ -1328,5 +1151,140 @@
       agent-id="a76b4e4e-27c4-450e-aa0d-36c39f8e3a9f"
       language-code="id"
     ></df-messenger>
+
+    <script>
+      // Typing Animation
+      const texts = [
+        "IT Support Specialist",
+        "Network Administrator",
+        "Fresh Graduate TKJ",
+        "Future TNI AL",
+        "Problem Solver",
+        "Tech Enthusiast",
+      ];
+
+      let textIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const typingSpeed = 100;
+      const deletingSpeed = 50;
+      const pauseTime = 2000;
+
+      function typeWriter() {
+        const currentText = texts[textIndex];
+        const typingElement = document.getElementById("typing-text");
+
+        if (!isDeleting) {
+          typingElement.textContent = currentText.substring(0, charIndex + 1);
+          charIndex++;
+
+          if (charIndex === currentText.length) {
+            setTimeout(() => {
+              isDeleting = true;
+            }, pauseTime);
+          }
+        } else {
+          typingElement.textContent = currentText.substring(0, charIndex - 1);
+          charIndex--;
+
+          if (charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length;
+          }
+        }
+
+        const speed = isDeleting ? deletingSpeed : typingSpeed;
+        setTimeout(typeWriter, speed);
+      }
+
+      // Mobile menu toggle
+      document
+        .getElementById("mobile-menu-btn")
+        .addEventListener("click", function () {
+          const mobileMenu = document.getElementById("mobile-menu");
+          mobileMenu.classList.toggle("hidden");
+        });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById("mobile-menu");
+          if (!mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+
+      // Contact form handling (jika Anda tidak menggunakan action mailto:)
+      const contactForm = document.getElementById("contact-form");
+      if (contactForm) {
+        contactForm.addEventListener("submit", function (e) {
+          // Hentikan default action jika itu BUKAN mailto:
+          if (this.getAttribute("action").startsWith("mailto:")) return;
+
+          e.preventDefault();
+          const formData = new FormData(this);
+          const data = Object.fromEntries(formData);
+
+          if (!data.name || !data.email || !data.subject || !data.message) {
+            alert("Mohon lengkapi semua field yang diperlukan.");
+            return;
+          }
+          alert(
+            "Terima kasih! Pesan Anda telah dikirim. Saya akan merespons segera."
+          );
+          this.reset();
+        });
+      }
+
+      // Initialize animations when page loads
+      document.addEventListener("DOMContentLoaded", function () {
+        typeWriter();
+
+        // Add scroll animations
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "1";
+              entry.target.style.transform = "translateY(0)";
+            }
+          });
+        }, observerOptions);
+
+        // Observe sections for scroll animations
+        document.querySelectorAll("section").forEach((section) => {
+          section.style.opacity = "0";
+          section.style.transform = "translateY(30px)";
+          section.style.transition = "all 0.6s ease-out";
+          observer.observe(section);
+        });
+      });
+
+      // Add navbar scroll effect
+      window.addEventListener("scroll", function () {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 10) {
+          nav.classList.add("shadow-lg", "shadow-sky-500/5");
+        } else {
+          nav.classList.remove("shadow-lg", "shadow-sky-500/5");
+        }
+      });
+
+      console.log("🚀 Portfolio Muhammad Ridhoi loaded successfully!");
+    </script>
   </body>
 </html>

@@ -1,6 +1,5 @@
-# mengabaikan folder node_modules
-node_modules/
-.DS_Store
-.env
-.env.local
-.env.production
+# Dependencies
+/node_modules
+
+# Build output
+/style.css

@@ -1,7 +1,7 @@
 {
   "name": "portofolio-ridhoi",
   "version": "1.0.0",
-  "description": "Portfolio Website",
+  "description": "Portfolio Website Muhammad Ridhoi",
   "scripts": {
     "build": "npx tailwindcss -i ./src/input.css -o ./style.css",
     "dev": "npx tailwindcss -i ./src/input.css -o ./style.css --watch"

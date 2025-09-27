@@ -1,0 +1,14 @@
+{
+  "name": "portofolio-ridhoi",
+  "version": "1.0.0",
+  "description": "Portfolio Website Muhammad Ridhoi",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./style.css",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./style.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
+  }
+}

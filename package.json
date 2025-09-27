@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Portfolio Website",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./style.css",
-    "dev": "tailwindcss -i ./src/input.css -o ./style.css --watch"
+    "build": "npx tailwindcss -i ./src/input.css -o ./style.css",
+    "dev": "npx tailwindcss -i ./src/input.css -o ./style.css --watch"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",
